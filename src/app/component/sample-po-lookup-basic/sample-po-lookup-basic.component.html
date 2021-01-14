@@ -1,0 +1,17 @@
+<form [formGroup]="reactiveForm">
+  <po-input
+  formControlName="input"
+  >
+  </po-input>
+  <po-lookup
+    name="lookup"
+    p-field-label="label"
+    p-field-value="value"
+    p-filter-service="https://po-sample-api.herokuapp.com/v1/heroes"
+    p-label="PO Lookup"
+    formControlName="lookup"
+  >
+  </po-lookup>
+
+  <po-button p-label="Save" (p-click)="saveForm()"></po-button>
+</form>
